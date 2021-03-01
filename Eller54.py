@@ -84,8 +84,8 @@ class Hend:
         pare = 0
         pos = 0
         if self.combination[1] == 0 and self.combination[5] == 0:
-            for i in range(len(self.cards)-1):
-                for j in range(i+1, len(self.cards)):
+            for i in range(len(self.cards) - 1):
+                for j in range(i + 1, len(self.cards)):
                     if self.cards[i].value == self.cards[j].value:
                         pare += 1
                         pos = i
@@ -111,7 +111,6 @@ f = open('p054_poker.txt', mode='r')
 
 str1 = f.read()
 A = []
-B = []
 
 A = str1.split('\n')
 strhend1 = ''
@@ -126,9 +125,9 @@ for str1 in A:
     h2 = Hend(strhend2)
 
     if h1.combination > h2.combination:
-        First_win +=1
+        First_win += 1
     if h1.combination == h2.combination:
         print("Drow!!!")
 
-print(First_win,' from', len(A))
+print(First_win, ' from', len(A))
 # First_win = 406
